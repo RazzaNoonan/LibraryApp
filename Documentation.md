@@ -16,6 +16,11 @@
 ## Connecting to firebase
 1. Created project in firebase called Livrary-App and set up authentication to have email/password
 2. Added Firebase Config to my Angular Environment
-3.  Initialized Firebase in my App
+3. Initialized Firebase in my App
+
+## Creating pages
+1. Create folder pages cd to it and first creating login page, sign up page, landing page, forgot password page, 
+2. ionic generate page signup - login etc.
+
 
 
