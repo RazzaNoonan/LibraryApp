@@ -15,6 +15,7 @@
 
 ## Connecting to firebase
 1. Created project in firebase called Livrary-App and set up authentication to have email/password
-2.
+2. Added Firebase Config to my Angular Environment
+3.  Initialized Firebase in my App
 
 
