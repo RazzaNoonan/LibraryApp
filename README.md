@@ -2,25 +2,32 @@
 [![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-7f7980b617ed060a017424585567c406b6ee15c891e84e1186181d67ecf80aa0.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=13064466)
 # Final Project
 
-**Title:** Items Application Manager  
-**Name:** Patrick Murphy  
-**Student ID:** G00123456  
+**Title:** Library App  
+**Name:** Ronan Noonan
+**Student ID:** G00384824 
 
 ## Application Function
 
 Discuss, in detail, what the application does. Add a screenshot image of the application in use. 
 
-## Running the Application
+## How to Run the App
 
-Provide step by step instructions on how to run your applicaiton. Are there any prerequisite softwares required?
+Follow these steps to run the app locally on your machine:
+```
 
-```MARKDOWN
-List the instructions step by step
-    1. Install Angular CLI - npm install -g @angular/cli
-    2. Log in to Firebase - firebase login
-    3. ionic serve
-            :
-            :
+    1. Clone the repository to your local machine using Git: 
+    * Clone repo - git clone https://github.com/DanielCreggOrganization/acpad-project-2023-RazzaNoonan.git
+
+    2. Change directory to the app - cd Libary-App
+
+    3. npm install:
+    * Make sure you have node installed - node -v or npm -v (Checks if installed)
+    * npm install -g @angular/cli
+    * npm install -g firebase-tools
+    * npm install @angular/fire
+    * npm install firebase
+
+    4. ionic serve
 ```
 
 ## Minimum Project Requirments
