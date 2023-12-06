@@ -1,16 +1,32 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>landing</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" class="custom-landing-page">
+  <!-- Header Section: Contains the logo for the library app -->
+  <div class="header-section">
+    <ion-img class="landing-logo" src="assets/ReadRentalLibrary.png" alt="Welcome to Read Rental"></ion-img> 
+  </div>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">landing</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <div>
-    <h2>Library</h2>
+  <!-- Content Section: Introduces Read Rental -->
+  <div class="content-section">
+    <h2>Welcome to Read Rental</h2>
+    <p>Your gateway to endless knowledge.</p>
+    <h3>Explore a world of books</h3>
+    <p>Join our community and dive into the vast world of literature.</p>
+    
+    <!-- Feature Section: Only Read card remains -->
+    <div class="feature-section">
+      <ion-card class="feature-card read-card" (click)="showReadMessage()">
+        <ion-card-header>
+          <ion-card-title>Read</ion-card-title>
+        </ion-card-header>
+      </ion-card>
+      <p *ngIf="readMessage" class="message">{{ readMessage }}</p>
+    </div>
+  </div>
+
+  <!-- CTA Button: Changed to a login icon -->
+  <div class="cta-section">
+    <ion-button class="login-button" shape="round" [routerLink]="['/login']">
+      <ion-icon slot="start" name="log-in-outline"></ion-icon>
+      Login
+    </ion-button>
   </div>
 </ion-content>

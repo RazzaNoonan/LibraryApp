@@ -1,0 +1,89 @@
+.custom-landing-page {
+    --background: #f3f3f3; // Light background for a clean and neutral look
+  
+    .header-section {
+      text-align: center;
+      background-color: #87CEEB; // Sky blue for a calm and inviting feel
+      color: #003366; // Dark blue for contrast
+  
+      .landing-logo {
+        max-width: 30%; // Limits the logo to half of the section width
+        height: auto; // Ensures the logo maintains its aspect ratio
+        margin: 0 auto; // Centers the logo horizontally
+        display: block; // Ensures the image is treated as a block-level element
+      }
+  
+      h2 {
+        margin-top: 15px;
+        font-size: 2em;
+        font-weight: bold;
+      }
+  
+      p {
+        font-size: 1.2em;
+      }
+    }
+  
+    .content-section {
+      padding: 40px;
+      text-align: center;
+  
+      h3 {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #87CEEB;
+        margin-bottom: 20px;
+      }
+    }
+  
+    .feature-section {
+        display: flex;
+        justify-content: center; // Center the single Read card
+        margin-top: 25px;
+      
+        .read-card {
+          // Style as needed, for example:
+          width: 100%; // Full width if only one card is present
+          max-width: 350px; // Optional: Set a max-width for the card
+        }
+      }
+      
+      .cta-section {
+        text-align: center;
+        padding: 20px;
+      
+        .login-button {
+          --background: transparent;
+          --color: #4682B4;
+          font-weight: bold;
+          font-size: 1.2em;
+        }
+      
+        ion-icon {
+          font-size: 1.5em;
+          vertical-align: middle;
+          margin-right: 8px;
+        }
+      }
+  
+    .cta-section {
+      padding: 40px;
+      text-align: center;
+  
+      .cta-button {
+        max-width: 250px;
+        font-weight: bold;
+        background-color: #4682B4;
+        color: #ffffff;
+        font-size: 1.2em;
+        padding: 15px 30px;
+        border: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+      }
+  
+      .cta-button:active {
+        transform: scale(0.5); // Reduces the size of the button when clicked
+      }
+    }
+  }
