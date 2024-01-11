@@ -1,0 +1,30 @@
+.custom-login-page {
+    --background: #f3f3f3;
+  
+    .logo-section {
+      text-align: center;
+      margin-top: 40px;
+  
+      .login-logo {
+        max-width: 30%;
+        height: auto;
+        margin: 0 auto;
+      }
+    }
+  
+    .login-form {
+      padding: 40px;
+      text-align: center;
+  
+      ion-item {
+        margin-bottom: 20px;
+      }
+  
+      .login-button {
+        --background: #4682B4;
+        --color: #ffffff;
+        margin-top: 20px;
+      }
+    }
+  }
+  

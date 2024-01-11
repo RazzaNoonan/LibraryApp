@@ -1,16 +1,18 @@
-import { Component, OnInit } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
-export class LoginPage implements OnInit {
+export class LoginPage {
+  email: string = '';
+  password: string = '';
 
-  constructor(private auth: AngularFireAuth) { }
+  constructor() { }
 
-  ngOnInit() {
+  login(): void {
+    // Implement login logic here
+    console.log('Login with', this.email, this.password);
   }
-
 }

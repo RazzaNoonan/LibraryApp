@@ -1,13 +1,32 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>signup</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" class="custom-signup-page">
+  <!-- Logo Section -->
+  <div class="logo-section">
+    <ion-img class="signup-logo" src="assets/ReadRentalLibrary.png" alt="Read Rental"></ion-img>
+  </div>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">signup</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <!-- Signup Form -->
+  <div class="signup-form">
+    <ion-item>
+      <ion-label position="floating">Full Name</ion-label>
+      <ion-input type="text" [(ngModel)]="fullName"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" [(ngModel)]="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Confirm Password</ion-label>
+      <ion-input type="password" [(ngModel)]="confirmPassword"></ion-input>
+    </ion-item>
+
+    <ion-button expand="full" class="signup-button" (click)="signup()">Sign Up</ion-button>
+    <ion-button expand="full" fill="clear" [routerLink]="['/login']">Already have an account? Login</ion-button>
+  </div>
 </ion-content>
