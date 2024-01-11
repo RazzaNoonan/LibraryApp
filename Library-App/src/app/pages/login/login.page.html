@@ -1,22 +1,33 @@
 <ion-content [fullscreen]="true" class="custom-login-page">
-  <!-- Logo Section -->
+  <!-- The main content of the login page-->
+
+  <!-- Section for the logo -->
   <div class="logo-section">
+    <!-- Image component displaying the app logo -->
     <ion-img class="login-logo" src="assets/ReadRentalLibrary.png" alt="Read Rental"></ion-img>
   </div>
 
-  <!-- Login Form -->
+  <!-- Section containing the login form -->
   <div class="login-form">
-    <ion-item>
-      <ion-label position="floating">Email</ion-label>
-      <ion-input type="email" [(ngModel)]="email"></ion-input>
-    </ion-item>
+    <!-- Form element with Angular formGroup directive for reactive forms and ngSubmit to handle form submission -->
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
 
-    <ion-item>
-      <ion-label position="floating">Password</ion-label>
-      <ion-input type="password" [(ngModel)]="password"></ion-input>
-    </ion-item>
+      <!-- Form field for email input -->
+      <ion-item>
+        <ion-label position="floating">Email</ion-label> <!-- Label for the email input -->
+        <ion-input type="email" formControlName="email"></ion-input> <!-- Email input field bound to the form control named 'email' -->
+      </ion-item>
 
-    <ion-button expand="full" class="login-button" (click)="login()">Login</ion-button>
-    <ion-button expand="full" fill="clear" [routerLink]="['/signup']">Register</ion-button>
+      <!-- Form field for password input -->
+      <ion-item>
+        <ion-label position="floating">Password</ion-label> <!-- Label for the password input -->
+        <ion-input type="password" formControlName="password"></ion-input> <!-- Password input field bound to the form control named 'password' -->
+      </ion-item>
+
+      <!-- Login button -->
+      <ion-button expand="full" class="login-button" type="submit">Login</ion-button>
+      <!-- Navigation button to the registration page -->
+      <ion-button expand="full" fill="clear" [routerLink]="['/signup']">Register</ion-button>
+    </form>
   </div>
 </ion-content>

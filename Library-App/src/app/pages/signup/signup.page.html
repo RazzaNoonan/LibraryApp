@@ -1,32 +1,39 @@
 <ion-content [fullscreen]="true" class="custom-signup-page">
-  <!-- Logo Section -->
+  <!-- Main content area for signup page -->
+
+  <!-- Section for displaying the logo -->
   <div class="logo-section">
+    <!-- Image component for the app logo -->
     <ion-img class="signup-logo" src="assets/ReadRentalLibrary.png" alt="Read Rental"></ion-img>
   </div>
 
-  <!-- Signup Form -->
+  <!-- Section containing the signup form -->
   <div class="signup-form">
-    <ion-item>
-      <ion-label position="floating">Full Name</ion-label>
-      <ion-input type="text" [(ngModel)]="fullName"></ion-input>
-    </ion-item>
+    <!-- Form element with Angular formGroup directive for reactive forms and ngSubmit to handle form submission -->
+    <form [formGroup]="regForm" (ngSubmit)="signUp()">
 
-    <ion-item>
-      <ion-label position="floating">Email</ion-label>
-      <ion-input type="email" [(ngModel)]="email"></ion-input>
-    </ion-item>
+      <!-- Form field for full name input -->
+      <ion-item>
+        <ion-label position="floating">Full Name</ion-label> <!-- Label for the full name input -->
+        <ion-input type="text" formControlName="fullName"></ion-input> <!-- Full name input field bound to the form control named 'fullName' -->
+      </ion-item>
 
-    <ion-item>
-      <ion-label position="floating">Password</ion-label>
-      <ion-input type="password" [(ngModel)]="password"></ion-input>
-    </ion-item>
+      <!-- Form field for email input -->
+      <ion-item>
+        <ion-label position="floating">Email</ion-label> <!-- Label for the email input -->
+        <ion-input type="email" formControlName="email"></ion-input> <!-- Email input field bound to the form control named 'email' -->
+      </ion-item>
 
-    <ion-item>
-      <ion-label position="floating">Confirm Password</ion-label>
-      <ion-input type="password" [(ngModel)]="confirmPassword"></ion-input>
-    </ion-item>
+      <!-- Form field for password input -->
+      <ion-item>
+        <ion-label position="floating">Password</ion-label> <!-- Label for the password input -->
+        <ion-input type="password" formControlName="password"></ion-input> <!-- Password input field bound to the form control named 'password' -->
+      </ion-item>
 
-    <ion-button expand="full" class="signup-button" (click)="signup()">Sign Up</ion-button>
-    <ion-button expand="full" fill="clear" [routerLink]="['/login']">Already have an account? Login</ion-button>
+      <!-- Sign Up button -->
+      <ion-button expand="full" class="signup-button" type="submit">Sign Up</ion-button>
+      <!-- Navigation button to the login page -->
+      <ion-button expand="full" fill="clear" [routerLink]="['/login']">Already have an account? Login</ion-button>
+    </form>
   </div>
 </ion-content>

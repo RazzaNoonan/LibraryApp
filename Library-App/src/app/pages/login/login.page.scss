@@ -1,30 +1,29 @@
 .custom-login-page {
-    --background: #f3f3f3;
-  
-    .logo-section {
-      text-align: center;
-      margin-top: 40px;
-  
-      .login-logo {
-        max-width: 30%;
-        height: auto;
-        margin: 0 auto;
-      }
-    }
-  
-    .login-form {
-      padding: 40px;
-      text-align: center;
-  
-      ion-item {
-        margin-bottom: 20px;
-      }
-  
-      .login-button {
-        --background: #4682B4;
-        --color: #ffffff;
-        margin-top: 20px;
-      }
+  --background: #f3f3f3; /* Sets a light gray background color for the login page */
+
+  .logo-section {
+    text-align: center; /* Centers the logo horizontally */
+    margin-top: 40px; /* Adds space above the logo */
+
+    .login-logo {
+      max-width: 30%; /* Limits the logo width to 30% of its container */
+      height: auto; /* Ensures the height scales proportionally to the width */
+      margin: 0 auto; /* Centers the logo within its container */
     }
   }
-  
+
+  .login-form {
+    padding: 40px; /* Adds padding around the login form */
+    text-align: center; /* Centers the form items horizontally */
+
+    ion-item {
+      margin-bottom: 20px; /* Adds space below each input item */
+    }
+
+    .login-button {
+      --background: #4682B4; /* Sets the background color of the login button to a shade of blue */
+      --color: #ffffff; /* Sets the text color of the login button to white */
+      margin-top: 20px; /* Adds space above the login button */
+    }
+  }
+}

@@ -26,6 +26,7 @@ Follow these steps to run the app locally on your machine:
     * npm install -g firebase-tools
     * npm install @angular/fire
     * npm install firebase
+    * npm install @ionic-native/core --legacy-peer-deps
 
     4. ionic serve
 ```
