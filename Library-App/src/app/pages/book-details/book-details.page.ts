@@ -17,8 +17,10 @@ export class BookDetailsPage {
     this.loading = true;
     this.bookService.getBookByISBN(this.isbn).subscribe(
       (data) => {
-        this.book = data; // Process the data to extract the book information
-        console.log(this.book); // Add this line to check the received data
+        // Assuming the data is nested as { 'ISBN:978-0321573513': { ...bookDetails } }
+        const bookKey = 'ISBN:' + this.isbn; // Construct the key to access the book details
+        this.book = data[bookKey]; // Now we are accessing the nested object
+        console.log(this.book); // Should log the book details now
         this.loading = false;
       },
       (error) => {
@@ -27,4 +29,4 @@ export class BookDetailsPage {
       }
     );
   }
-}  
+}

@@ -11,7 +11,7 @@
   <!-- Book Details (Displayed when 'book' is available) -->
   <div *ngIf="book" class="book-info">
     <!-- Book Cover Image -->
-    <img [src]="book.thumbnail_url" alt="Book Cover" class="book-cover">
+    <img [src]="book.cover.medium" alt="Book Cover" class="book-cover">
     
     <!-- Book Title -->
     <h2 class="book-title">{{ book.title }}</h2>

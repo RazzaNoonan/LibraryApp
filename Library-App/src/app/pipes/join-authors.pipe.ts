@@ -4,7 +4,7 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'joinAuthors'
 })
 export class JoinAuthorsPipe implements PipeTransform {
-  transform(authors: string[]): string {
-    return authors.join(', ');
+  transform(authors: string[] | null | undefined): string {
+    return authors ? authors.join(', ') : '';
   }
 }
