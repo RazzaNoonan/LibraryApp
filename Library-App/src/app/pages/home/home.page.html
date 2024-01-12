@@ -30,4 +30,13 @@
     <input type="file" #fileInput (change)="onFileSelected($event)" hidden>
   </div>
 
+  <!-- CTA Button: book icon -->
+  <div class="cta-section">
+    <ion-button class="book-icon" shape="round" [routerLink]="['/book-details']">
+      <ion-icon slot="start" name="book-outline"></ion-icon>
+      View Book
+    </ion-button>
+  </div>
+
+
 </ion-content>

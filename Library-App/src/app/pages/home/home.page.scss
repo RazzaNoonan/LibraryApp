@@ -83,4 +83,28 @@
       }
     }
   }
+  .cta-section {
+    display: flex;
+    justify-content: center; // Centers the button horizontally
+    align-items: center; // Centers the button vertically if needed
+    padding: 20px;
+    text-align: center; // Ensures text inside the button is centered
+  
+    ion-button {
+      --background: #87CEEB; // Sky blue color for the button
+      --color: #003366; // Dark blue color for the text
+      --padding: 10px 20px; // Padding inside the button
+      --border-radius: 5px; // Rounded corners
+      --transition: 0.3s ease; // Smooth transition for hover effects
+      font-weight: bold; // Bold text
+  
+      &:hover {
+        --background: darken(#87CEEB, 10%); // Darkens the button color on hover
+      }
+  
+      ion-icon {
+        margin-right: 8px; // Space between the icon and the text
+      }
+    }
+  }
 }
