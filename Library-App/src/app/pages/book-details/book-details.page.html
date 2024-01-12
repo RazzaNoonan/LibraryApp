@@ -1,13 +1,26 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>book-details</ion-title>
-  </ion-toolbar>
-</ion-header>
+<div class="book-details-page">
+  <!-- Search Section -->
+  <div class="search-section">
+    <input type="text" [(ngModel)]="isbn" placeholder="Enter ISBN" class="isbn-input">
+    <button (click)="searchBook()" class="search-button">Search</button>
+  </div>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">book-details</ion-title>
-    </ion-toolbar>
-  </ion-header>
-</ion-content>
+  <!-- Loading Spinner (Shown while loading data) -->
+  <div *ngIf="loading" class="loading-spinner">Loading...</div>
+
+  <!-- Book Details (Displayed when 'book' is available) -->
+  <div *ngIf="book" class="book-info">
+    <!-- Book Cover Image -->
+    <img [src]="book.thumbnail_url" alt="Book Cover" class="book-cover">
+    
+    <!-- Book Title -->
+    <h2 class="book-title">{{ book.title }}</h2>
+    
+    <!-- Book Authors (Joined using the 'joinAuthors' pipe) -->
+    <p class="book-author">{{ book.authors | joinAuthors }}</p>
+    
+    <!-- Additional Book Details  -->
+    <!-- Example: Displaying ISBN -->
+    <p class="book-details">ISBN: {{ book.isbn }}</p>
+  </div>
+</div>

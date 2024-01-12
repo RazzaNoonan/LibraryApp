@@ -1,0 +1,53 @@
+.book-details-page {
+    .search-section {
+      display: flex;
+      justify-content: center;
+      margin: 20px;
+  
+      .isbn-input {
+        padding: 10px;
+        margin-right: 10px;
+        border: 2px solid #87CEEB; // Sky blue border
+        border-radius: 5px;
+      }
+  
+      .search-button {
+        padding: 10px 20px;
+        background-color: #87CEEB; // Sky blue background
+        color: #003366; // Dark blue text
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+  
+        &:hover {
+          background-color: darken(#87CEEB, 10%);
+        }
+      }
+    }
+  
+    .loading-spinner {
+      text-align: center;
+      margin-top: 20px;
+    }
+  
+    .book-info {
+      text-align: center;
+      margin-top: 20px;
+  
+      .book-cover {
+        max-width: 100px;
+        height: auto;
+        margin-bottom: 15px;
+      }
+  
+      .book-title {
+        color: #003366; // Dark blue
+        margin-bottom: 5px;
+      }
+  
+      .book-author {
+        color: #87CEEB; // Sky blue
+      }
+    }
+  }
+  
