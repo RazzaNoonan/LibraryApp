@@ -1,20 +1,33 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Home page added
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<!-- This is the main content area for the home page of the app -->
+<ion-content class="custom-home-page">
+  
+  <!-- Header section of the page including navigation and logo -->
+  <header class="app-header">
+    <!-- Menu button for side navigation drawer -->
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <!-- Container for the app logo -->
+    <div class="logo">
+      <img src="assets/ReadRentalLibrary.png" alt="App Logo"/>
+    </div>
+    <!-- Logout button for the user to sign out -->
+    <button (click)="logout()">Logout</button>
+  </header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <!-- Area for the user profile information -->
+  <div class="profile-area">
+    <!-- Welcomes the user by name if available, otherwise defaults to 'Guest' -->
+    <h2>Welcome, {{ user?.displayName || 'Guest' }}</h2>
+    <!-- Container for the user's profile image -->
+    <div class="profile-image-circle" *ngIf="user">
+      <!-- Profile image sourced from the uploaded image URL or a default icon -->
+      <img [src]="uploadedImageUrl || 'assets/faceIcon.png'" alt="Profile Image">
+    </div>
+    <!-- Button to trigger the file input for changing the profile image -->
+    <button (click)="triggerFileInput()">Change Profile Image</button>
+    <!-- Hidden file input element for uploading images -->
+    <input type="file" #fileInput (change)="onFileSelected($event)" hidden>
   </div>
+
 </ion-content>

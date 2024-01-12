@@ -22,6 +22,7 @@ export class SignUpPage implements OnInit {
   ngOnInit() {
     // Initialize the registration form with validators for email and password.
     this.regForm = this.formBuilder.group({
+      fullName : ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]], // Email field with required and email format validations.
       password: ['', [Validators.required, Validators.minLength(6)]] // Password field with required and minimum length validations.
     });
@@ -39,11 +40,11 @@ export class SignUpPage implements OnInit {
 
     // Check if form is valid and perform signup.
     if (this.regForm.valid) {
-      const { email, password } = this.regForm.value;
+      const { fullName, email, password } = this.regForm.value;
 
       try {
         // Attempt to register the user using AuthService.
-        await this.authService.registerUser(email, password);
+        await this.authService.registerUser(email, password, fullName);
         console.log('User registered successfully!');
         await loading.dismiss(); // Dismiss loading indicator on success.
         this.router.navigate(['/home']); // Navigate to home page on successful registration.

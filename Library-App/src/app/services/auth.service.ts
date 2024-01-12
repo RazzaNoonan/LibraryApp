@@ -19,15 +19,17 @@ export class AuthService {
     });
   }
 
-  // Method to register a new user.
-  async registerUser(email: string, password: string): Promise<firebase.auth.UserCredential> {
+  async registerUser(email: string, password: string, fullName: string): Promise<firebase.auth.UserCredential> {
     const credential = await this.ngFireAuth.createUserWithEmailAndPassword(email, password);
     const user = credential.user;
     if (user) {
-      this.currentUserSubject.next(user); // Update the current user observable.
+      // Update user profile with display name
+      await user.updateProfile({ displayName: fullName });
+      this.currentUserSubject.next(user);
     }
     return credential;
   }
+  
 
   // Method to log in a user with email and password.
   async loginUser(email: string, password: string): Promise<firebase.auth.UserCredential> {
