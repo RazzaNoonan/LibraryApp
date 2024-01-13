@@ -1,85 +1,90 @@
 .book-details-page {
 
-    /* Header styling, setting up layout and background colors */
-    .app-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px;
-      background-color: #87CEEB; // Sky blue color
-      color: #003366; // Dark blue color for text
-  
-      /* Logo image styling, ensuring it fits within the header */
-      .logo img {
-        max-width: 300px;
-      }
-  
-      /* Style for the logout button, including hover effects */
-      button {
-        background-color: transparent;
-        color: #003366;
-        border: 2px solid #003366;
-        padding: 5px 15px;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-  
-        &:hover {
-          background-color: #003366;
-          color: white;
-        }
-      }
+  /* Header styling, setting up layout and background colors */
+  .app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #87CEEB; // Sky blue color
+    color: #003366; // Dark blue color for text
+
+    /* Logo image styling, ensuring it fits within the header */
+    .logo img {
+      max-width: 300px; // Maximum logo width
     }
 
-    .search-section {
-      display: flex;
-      justify-content: center;
-      margin: 20px;
-  
-      .isbn-input {
-        padding: 10px;
-        margin-right: 10px;
-        border: 2px solid #87CEEB; // Sky blue border
-        border-radius: 5px;
-      }
-  
-      .search-button {
-        padding: 10px 20px;
-        background-color: #87CEEB; // Sky blue background
-        color: #003366; // Dark blue text
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-  
-        &:hover {
-          background-color: darken(#87CEEB, 10%);
-        }
-      }
-    }
-  
-    .loading-spinner {
-      text-align: center;
-      margin-top: 20px;
-    }
-  
-    .book-info {
-      text-align: center;
-      margin-top: 20px;
-  
-      .book-cover {
-        max-width: 100px;
-        height: auto;
-        margin-bottom: 15px;
-      }
-  
-      .book-title {
-        color: #003366; // Dark blue
-        margin-bottom: 5px;
-      }
-  
-      .book-author {
-        color: #87CEEB; // Sky blue
+    /* Style for the logout button, including hover effects */
+    button {
+      background-color: transparent;
+      color: #003366;
+      border: 2px solid #003366;
+      padding: 5px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s; // Smooth background color transition
+
+      &:hover {
+        background-color: #003366; // Background color on hover
+        color: white; // Text color on hover
       }
     }
   }
-  
+
+  /* Styling for the search section */
+  .search-section {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+
+    .isbn-input {
+      padding: 10px;
+      margin-right: 10px;
+      border: 2px solid #87CEEB; // Sky blue border
+      border-radius: 5px;
+    }
+
+    .search-button {
+      padding: 10px 20px;
+      background-color: #87CEEB; // Sky blue background
+      color: #003366; // Dark blue text
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: darken(#87CEEB, 10%); // Slightly darker background color on hover
+      }
+    }
+  }
+
+  /* Styling for the loading spinner */
+  .loading-spinner {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  /* Styling for book information */
+  .book-info {
+    text-align: center;
+    margin-top: 20px;
+
+    /* Styling for the book cover image */
+    .book-cover {
+      max-width: 100px; // Maximum width of the book cover image
+      height: auto; // Automatically adjust the height
+      margin-bottom: 15px; // Margin at the bottom
+    }
+
+    /* Styling for the book title */
+    .book-title {
+      color: #003366; // Dark blue text color
+      margin-bottom: 5px; // Margin at the bottom
+    }
+
+    /* Styling for the book author */
+    .book-author {
+      color: #87CEEB; // Sky blue text color for author
+    }
+  }
+}

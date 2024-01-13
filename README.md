@@ -27,7 +27,8 @@ Follow these steps to run the app locally on your machine:
     * npm install @angular/fire
     * npm install firebase
     * npm install @ionic-native/core --legacy-peer-deps
-    * npm install @zxing/ngx-scanner --save
+    * npm install @capacitor-community/barcode-scanner
+
 
 
     4. ionic serve
@@ -63,6 +64,5 @@ Discuss the issues you faced with creating your application. Provide possible so
 
 ## Resources
 
-Provide links to resources used:
-
-* [YouTube](https://www.youtube.com/watch?v=Y0vH5Cm3HAk) - YouTube Tutorial I found helpful
+* [YouTube](https://www.youtube.com/watch?v=Y0vH5Cm3HAk) - **Video for firebase**
+* https://www.canva.com/ - **Link for logo creater** 

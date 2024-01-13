@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
-import { FirebaseService } from '../../services/firebase.service';
 import { BookService } from '../../services/book.service';
 import { Router } from '@angular/router'; // Import the Router module
-import firebase from 'firebase/compat/app';
-
 
 @Component({
   selector: 'app-book-details',
@@ -12,40 +9,41 @@ import firebase from 'firebase/compat/app';
   styleUrls: ['./book-details.page.scss'],
 })
 export class BookDetailsPage {
-  isbn: string = '';
-  book: any = null;
-  loading: boolean = false;
+  // Class properties
+  isbn: string = '';      // Stores the ISBN entered by the user
+  book: any = null;       // Stores the book data retrieved from the service
+  loading: boolean = false; // Indicates whether data is being loaded
 
   constructor(
-    private bookService: BookService,
+    private bookService: BookService, // Inject BookService
     private authService: AuthService, // Inject AuthService
     private router: Router // Inject Router
   ) {}
 
+  // Method to search for a book by ISBN
   searchBook() {
-    this.loading = true;
+    this.loading = true; // Display loading spinner
     this.bookService.getBookByISBN(this.isbn).subscribe(
       (data) => {
-        // Assuming the data is nested as { 'ISBN:978-0321573513': { ...bookDetails } }
-        const bookKey = 'ISBN:' + this.isbn; // Construct the key to access the book details
-        this.book = data[bookKey]; // Now we are accessing the nested object
-        console.log(this.book); // Should log the book details now
-        this.loading = false;
+        const bookKey = 'ISBN:' + this.isbn;
+        this.book = data[bookKey]; // Store the book data
+        console.log(this.book); // Log the book details
+        this.loading = false; // Hide loading spinner
       },
       (error) => {
-        console.error('Error fetching book data:', error);
-        this.loading = false;
+        console.error('Error fetching book data:', error); // Log error
+        this.loading = false; // Hide loading spinner
       }
     );
   }
   
+  // Method to log out the user
   logout() {
     this.authService.signOut().then(() => {
-      this.router.navigate(['/landing']); // Navigates to the landing page after logging out
+      this.router.navigate(['/landing']); // Navigate to the landing page after logout
     }).catch(error => {
-      console.error('Logout error:', error);
-      alert(`Logout error: ${error.message}`); // Provide the user with an error message
+      console.error('Logout error:', error); // Log logout error
+      alert(`Logout error: ${error.message}`); // Display error message to the user
     });
   }
-
 }
