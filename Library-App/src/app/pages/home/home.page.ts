@@ -65,6 +65,6 @@ export class HomePage implements OnInit, OnDestroy {
 
   logout() {
     // Handles the logout process
-    this.router.navigate(['/landing']); // Navigates to the login page after logging out
+    this.router.navigate(['/landing']); // Navigates to the landing page after logging out
   }
 }

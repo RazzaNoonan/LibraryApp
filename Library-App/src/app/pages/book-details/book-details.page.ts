@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../../services/auth.service';
+import { FirebaseService } from '../../services/firebase.service';
 import { BookService } from '../../services/book.service';
+import { Router } from '@angular/router'; // Import the Router module
+import firebase from 'firebase/compat/app';
+
 
 @Component({
   selector: 'app-book-details',
@@ -11,7 +16,11 @@ export class BookDetailsPage {
   book: any = null;
   loading: boolean = false;
 
-  constructor(private bookService: BookService) {}
+  constructor(
+    private bookService: BookService,
+    private authService: AuthService, // Inject AuthService
+    private router: Router // Inject Router
+  ) {}
 
   searchBook() {
     this.loading = true;
@@ -29,4 +38,14 @@ export class BookDetailsPage {
       }
     );
   }
+  
+  logout() {
+    this.authService.signOut().then(() => {
+      this.router.navigate(['/landing']); // Navigates to the landing page after logging out
+    }).catch(error => {
+      console.error('Logout error:', error);
+      alert(`Logout error: ${error.message}`); // Provide the user with an error message
+    });
+  }
+
 }
