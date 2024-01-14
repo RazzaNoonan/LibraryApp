@@ -61,9 +61,13 @@ Follow these steps to run the app locally on your machine:
 
 
 ## Structure Overview
+- Landing: This is the first page opened when the app is run.
 - Home Page: Includes user profile information and a button to view book details.
-- Search Page: Allows users to manually search for books using ISBN numbers or scan ISBN barcodes.
-- Book Details Page: Displays detailed information about selected books, including the book cover, title, authors, and ISBN.
+- Book Details Page: Allows users to manually search for books using ISBN numbers or scan ISBN barcodes. Displays detailed information about selected books, including the book cover, title, authors, and ISBN.
+
+<img src="./ScreenShots/1.png" alt="Screenshot 1">
+<img src="./ScreenShots/2.png" alt="Screenshot 2">
+<img src="./ScreenShots/3.png" alt="Screenshot 3">
 
 ## Methods and Functionalities
 - `searchBook(isbn)`: Searches for books based on ISBN numbers. This function can be found in the `BookDetailsPage` component.
