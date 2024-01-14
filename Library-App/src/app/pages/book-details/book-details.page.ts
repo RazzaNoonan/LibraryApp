@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { BookService } from '../../services/book.service';
-import { Router } from '@angular/router'; // Import the Router module
+import { Router } from '@angular/router'; // Import Router module
+import { ScannerService } from '../../services/scanner.service';
 
 @Component({
   selector: 'app-book-details',
@@ -17,8 +18,18 @@ export class BookDetailsPage {
   constructor(
     private bookService: BookService, // Inject BookService
     private authService: AuthService, // Inject AuthService
-    private router: Router // Inject Router
+    private router: Router, // Inject Router
+    private scannerService: ScannerService // ScannerService
   ) {}
+
+  async scanISBN() {
+    const isbn = await this.scannerService.startScan();
+    if (isbn) {
+      this.isbn = isbn;
+      this.searchBook(); // You can then use this ISBN to search for books
+    }
+  }
+
 
   // Method to search for a book by ISBN
   searchBook() {

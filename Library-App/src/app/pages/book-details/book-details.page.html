@@ -38,4 +38,12 @@
     <!-- Example: Displaying ISBN -->
     <p class="book-details">ISBN: {{ book.isbn }}</p>
   </div>
+
+  <div class="scan-button-container">
+    <ion-button (click)="scanISBN()" class="scan-button">
+      <ion-icon name="camera-outline"></ion-icon>
+      Scan ISBN
+    </ion-button>
+  </div>
+  
 </div>

@@ -87,4 +87,37 @@
       color: #87CEEB; // Sky blue text color for author
     }
   }
+
+  .scan-button-container {
+    display: flex;
+    justify-content: center; // Centers the child horizontally
+    margin-top: 20px; // Space above the container
+  }
+
+
+   // Style for the "Scan ISBN" button
+   .scan-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #87CEEB; // Sky blue background to match your theme
+    color: #003366; // Dark blue text color for contrast
+    padding: 5px 10px; // Reduced padding for a smaller button
+    border: 1px solid #003366; // Dark blue border to match text
+    border-radius: 3px; // Slightly rounded corners
+    margin-top: 10px; // Margin from the previous element
+    cursor: pointer;
+    font-size: 14px; // Smaller font size for a compact look
+
+    ion-icon {
+      margin-right: 5px; // Space between icon and text
+      font-size: 14px; // Smaller icon to match the text
+    }
+
+    &:hover {
+      background-color: darken(#87CEEB, 10%); // Slightly darker on hover
+    }
+  }
+    
+  
 }
