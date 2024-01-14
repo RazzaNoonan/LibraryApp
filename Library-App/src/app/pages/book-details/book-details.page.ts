@@ -57,4 +57,9 @@ export class BookDetailsPage {
       alert(`Logout error: ${error.message}`); // Display error message to the user
     });
   }
+
+  // Method to navigate to the home page
+  goHome() {
+    this.router.navigate(['/home']); // Navigate to the home page
+  }
 }

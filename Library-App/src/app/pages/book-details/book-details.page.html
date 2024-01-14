@@ -1,15 +1,25 @@
 <div class="book-details-page">
 
    <!-- Header section of the page including navigation and logo -->
-   <header class="app-header">
+  <header class="app-header">
+    <!-- Button to go back to home -->
+    <ion-buttons slot="start">
+      <ion-button (click)="goHome()">
+        <ion-icon name="home-outline"></ion-icon>
+        Home
+      </ion-button>
+    </ion-buttons>
+
     <!-- Menu button for side navigation drawer -->
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
+
     <!-- Container for the app logo -->
     <div class="logo">
       <img src="assets/ReadRentalLibrary.png" alt="App Logo"/>
     </div>
+
     <!-- Logout button for the user to sign out -->
     <button (click)="logout()">Logout</button>
   </header>

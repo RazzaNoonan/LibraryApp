@@ -1,5 +1,4 @@
 .book-details-page {
-
   /* Header styling, setting up layout and background colors */
   .app-header {
     display: flex;
@@ -8,11 +7,6 @@
     padding: 10px;
     background-color: #87CEEB; // Sky blue color
     color: #003366; // Dark blue color for text
-
-    /* Logo image styling, ensuring it fits within the header */
-    .logo img {
-      max-width: 300px; // Maximum logo width
-    }
 
     /* Style for the logout button, including hover effects */
     button {
@@ -28,6 +22,17 @@
         background-color: #003366; // Background color on hover
         color: white; // Text color on hover
       }
+    }
+  }
+
+  /* Center the logo within the header */
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; // Allow the logo to take available space
+    img {
+      max-width: 300px; // Maximum logo width
     }
   }
 
